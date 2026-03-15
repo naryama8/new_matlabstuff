@@ -13,7 +13,9 @@ include_directories("${MATLAB_ROOT}/extern/include")
 add_library(my_mex_file SHARED
         skml2/three_phase.c
         skml2/cross_signal.c
-        skml_tugas4/pmsm.c)
+        skml_tugas4/pmsm.c
+        skml_tugas4/sp_ctrl.c
+        skml_tugas4/RFOC.c)
 
 # 4. CRITICAL: Tell simstruc.h this is a MEX file
 target_compile_definitions(my_mex_file PRIVATE MATLAB_MEX_FILE)
